@@ -1,0 +1,40 @@
+x<-list(
+  name="Car",
+  drive="I'm driving",
+  signal="biiip-biiip!!!",
+  wheels=4
+)
+class(x)<-"Car"
+print.Car<-function(car){
+ cat("Колес", j$wheels, "\n")
+ cat("Водительское сидение", j$driverSeat, "\n")
+ cat("Пассажирских сидений", j$passangersSeats, "\n")
+ cat("Название", cr$name, "\n")
+ cat("Топливо", cr$fuel, "\n")
+}
+
+a<-list(
+  name="BMW",
+  fuel="дизель"
+)
+class(a)<-c("NewCar1","Car")
+
+b<-list(
+  name="Mercedes",
+  fuel="бензин"
+)
+class(b)<-c("NewCar2","Car")
+
+c<-list(
+  name="Tesla",
+  fuel="электричество"
+)
+class(c)<-c("NewCar3","Car")
+
+info<-function(){
+  v1 <- readline("Какой автомобиль вас интересует(BMW, Mercedes, Tesla)?")
+  if(v1 == "BMW") print.Car(a)
+  if(v1 == "Mercedes") print.Car(b)
+  if(v1 == "Tesla") print.Car(c)
+}
+info()
